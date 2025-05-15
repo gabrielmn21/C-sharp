@@ -1,0 +1,10 @@
+C:\Users\Alunos\source\repos\Trabalho\bin\Debug\Trabalho.exe.config
+C:\Users\Alunos\source\repos\Trabalho\bin\Debug\Trabalho.exe
+C:\Users\Alunos\source\repos\Trabalho\bin\Debug\Trabalho.pdb
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.csproj.AssemblyReference.cache
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.Form1.resources
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.Properties.Resources.resources
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.csproj.GenerateResource.cache
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.csproj.CoreCompileInputs.cache
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.exe
+C:\Users\Alunos\source\repos\Trabalho\obj\Debug\Trabalho.pdb
