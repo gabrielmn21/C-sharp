@@ -71,6 +71,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChatGPT Image 19 de mai. de 2025, 19_18_35.tga" />
     <None Include="Gabriel_BDDataSet.xsc">
       <DependentUpon>Gabriel_BDDataSet.xsd</DependentUpon>
     </None>
