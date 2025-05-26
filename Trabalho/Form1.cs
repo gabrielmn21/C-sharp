@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,25 @@ namespace Trabalho
 
         }
 
+
+
+        private void txtPesquisa_Enter(object sender, EventArgs e)
+        {
+            if (txtPesquisa.Text == "Digite o ID ou Nome do usuário")
+            {
+                txtPesquisa.Text = "";
+                txtPesquisa.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtPesquisa_Leave(object sender, EventArgs e)
+        {
+            if (txtPesquisa.Text == "")
+            {
+                txtPesquisa.Text = "Digite o ID ou Nome do usuário";
+                txtPesquisa.ForeColor = Color.Gray;
+            }
+        }
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             try
@@ -92,7 +112,73 @@ namespace Trabalho
                 MessageBox.Show("Erro ao realizar a pesquisa: " + ex.Message);
             }
         }
+        private string connectionString = @"Data Source= 192.168.1.190,1433\SQLEXPRESS;Initial Catalog=Gabriel_BD;User ID=Gabriel_BD;Password=Gabriel/00;";
 
-        
+
+
+
+
+
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            string idTexto = txtExcluir.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(idTexto))
+            {
+                MessageBox.Show("Por favor, digite um ID válido.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Primeiro, verifica se o usuário existe
+                    string queryBusca = "SELECT Nome FROM Usuarios WHERE ID = @ID";
+                    SqlCommand cmdBusca = new SqlCommand(queryBusca, conn);
+                    cmdBusca.Parameters.AddWithValue("@ID", idTexto);
+
+                    object resultado = cmdBusca.ExecuteScalar();
+
+                    if (resultado != null)
+                    {
+                        string nomeUsuario = resultado.ToString();
+                        DialogResult confirmacao = MessageBox.Show($"Tem certeza que deseja excluir o usuário \"{nomeUsuario}\"?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (confirmacao == DialogResult.Yes)
+                        {
+                            string queryDelete = "DELETE FROM Usuarios WHERE ID = @ID";
+                            SqlCommand cmdDelete = new SqlCommand(queryDelete, conn);
+                            cmdDelete.Parameters.AddWithValue("@ID", idTexto);
+
+                            int linhasAfetadas = cmdDelete.ExecuteNonQuery();
+
+                            if (linhasAfetadas > 0)
+                            {
+                                MessageBox.Show("Usuário excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erro ao excluir o usuário. Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário não encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar ao banco de dados:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
+        }
     }
 }
+
