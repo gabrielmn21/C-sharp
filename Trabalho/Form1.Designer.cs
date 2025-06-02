@@ -35,9 +35,9 @@
             System.Windows.Forms.Label cPFLabel;
             System.Windows.Forms.Label emailLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -78,11 +78,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtExcluir = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.usuariosTableAdapter = new Trabalho.Gabriel_BDDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new Trabalho.Gabriel_BDDataSetTableAdapters.TableAdapterManager();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             iDLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             telefoneLabel = new System.Windows.Forms.Label();
@@ -100,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -353,7 +356,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(780, 534);
+            this.tabControl1.Size = new System.Drawing.Size(780, 551);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPage1
@@ -376,7 +379,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(772, 494);
+            this.tabPage1.Size = new System.Drawing.Size(772, 511);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -386,7 +389,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Dubai Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(506, 56);
+            this.label7.Location = new System.Drawing.Point(506, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 40);
             this.label7.TabIndex = 14;
@@ -395,7 +398,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(421, 47);
+            this.pictureBox3.Location = new System.Drawing.Point(422, 56);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(282, 280);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -405,7 +408,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 480);
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(464, 478);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(305, 27);
             this.label5.TabIndex = 12;
@@ -414,6 +418,7 @@
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.dataGridView1);
@@ -422,7 +427,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(772, 494);
+            this.tabPage2.Size = new System.Drawing.Size(772, 511);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisa";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -430,7 +435,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-3, 364);
+            this.pictureBox2.Location = new System.Drawing.Point(-7, 349);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(132, 154);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -450,21 +455,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -473,14 +478,14 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.dataGridView1.DataSource = this.usuariosBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(103, 119);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
@@ -543,10 +548,10 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.BackColor = System.Drawing.Color.White;
+            this.txtPesquisa.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesquisa.CausesValidation = false;
-            this.txtPesquisa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPesquisa.ForeColor = System.Drawing.Color.White;
+            this.txtPesquisa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtPesquisa.Location = new System.Drawing.Point(113, 66);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(475, 35);
@@ -555,16 +560,17 @@
             // tabPage3
             // 
             this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
+            this.tabPage3.Controls.Add(this.pictureBox4);
+            this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.pictureBox1);
-            this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.txtExcluir);
             this.tabPage3.Controls.Add(this.btnExcluir);
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(772, 494);
+            this.tabPage3.Size = new System.Drawing.Size(772, 511);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Exclusão";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -572,7 +578,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 480);
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(461, 473);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(305, 27);
             this.label6.TabIndex = 5;
@@ -597,17 +604,9 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 27);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Digite o ID do Usuário a ser excluído:";
-            // 
             // txtExcluir
             // 
+            this.txtExcluir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtExcluir.Location = new System.Drawing.Point(266, 138);
             this.txtExcluir.Name = "txtExcluir";
             this.txtExcluir.Size = new System.Drawing.Size(170, 35);
@@ -639,13 +638,43 @@
             this.tableAdapterManager.UpdateOrder = Trabalho.Gabriel_BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(464, 484);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 27);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "©2005-2025 CodeNova  All Rights Reserved";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(133, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(483, 27);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Atenção! Depois de confirmar todos os dados do usuário serão apagados!";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(116, 234);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 23);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 534);
+            this.ClientSize = new System.Drawing.Size(780, 551);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -667,6 +696,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -707,7 +737,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtExcluir;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -718,7 +747,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
-
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 

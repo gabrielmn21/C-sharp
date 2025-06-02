@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Trabalho
 {
@@ -16,6 +17,7 @@ namespace Trabalho
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -30,11 +32,17 @@ namespace Trabalho
         {
             // TODO: esta linha de código carrega dados na tabela 'gabriel_BDDataSet.Usuarios'. Você pode movê-la ou removê-la conforme necessário.
             this.usuariosTableAdapter.Fill(this.gabriel_BDDataSet.Usuarios);
+            txtPesquisa.Enter += txtPesquisa_Enter;
+            txtPesquisa.Leave += txtPesquisa_Leave;
+            txtPesquisa.Text = "Digite o ID ou Nome do usuário";
+            txtPesquisa.ForeColor = Color.Gray;
+
+            txtExcluir.Enter += txtExcluir_Enter;
+            txtExcluir.Leave += txtExcluir_Leave;
+            txtExcluir.Text = "Digite o ID para excluir";
+            txtExcluir.ForeColor = Color.Gray;
 
         }
-
-
-
         private void txtPesquisa_Enter(object sender, EventArgs e)
         {
             if (txtPesquisa.Text == "Digite o ID ou Nome do usuário")
@@ -46,12 +54,38 @@ namespace Trabalho
 
         private void txtPesquisa_Leave(object sender, EventArgs e)
         {
-            if (txtPesquisa.Text == "")
+            if (string.IsNullOrWhiteSpace(txtPesquisa.Text))
             {
                 txtPesquisa.Text = "Digite o ID ou Nome do usuário";
                 txtPesquisa.ForeColor = Color.Gray;
             }
         }
+
+
+        private void txtExcluir_Enter(object sender, EventArgs e)
+        {
+            if (txtExcluir.Text == "Digite o ID para excluir")
+            {
+                txtExcluir.Text = "";
+                txtExcluir.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtExcluir_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtExcluir.Text))
+            {
+                txtExcluir.Text = "Digite o ID para excluir";
+                txtExcluir.ForeColor = Color.Gray;
+            }
+        }
+
+
+        
+
+
+
+        
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             try
@@ -179,6 +213,9 @@ namespace Trabalho
             
 
         }
+
+        
+
     }
 }
 
